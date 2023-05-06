@@ -11,9 +11,8 @@ print("\033[44;1m" + "This program is a simple app calculator that will ask the 
 input("Press the ENTER key to run the program....")
 time.sleep(2)
 
-
-#Define the calculator
-def calculator():
+#Loop with true condition
+while True:
     #Exception handling
     try:
         #Ask the user to choose one operation
@@ -44,6 +43,30 @@ def calculator():
         print("-" * 20)
         print("\033[91;1m" + "Result: ", result, "\033[0m")
         print("\033[4m" + "-Operation executed-\n" + "\033[0m" )
+        #Loop with true condition
+        #Ask the user if they want to try again
+        try_again = str(input("\033[95m" + "Do you want to try again? (yes/no): " + "\033[0m"))
+
+        #If yes, rerun the program
+        if try_again == "yes":
+            continue
+        #If no, Display "Thank you!" and exit the program
+        elif try_again == "no":
+            gratitude = "\033[102;1m" + "Thank you!" + "\033[0m"
+            print("\n" + ":" * 50)
+            print(gratitude.center(60))
+            print(":" * 50)
+            break
+        while try_again != "yes" and try_again != "no":
+            print("\033[100m" + "Invalid input: Please enter only 'yes or no'." + "\033[0m")
+            try_again = str(input("\033[95m" + "Do you want to try again? (yes/no): " + "\033[0m"))
+                        
+            if try_again == "no":
+                gratitude = "\033[102;1m" + "Thank you!" + "\033[0m"
+                print("\n" + ":" * 50)
+                print(gratitude.center(60))
+                print(":" * 50)
+                exit()
 
     except ZeroDivisionError:
         print("\033[100m" + "Invalid Input: Cannot be devide by zero." + "\033[0m")
@@ -53,31 +76,3 @@ def calculator():
         print("\033[1m" + "...Simple App Calculator Program...".center(50) + "\033[0m")
         print("=" * 50 + "\n")
 
-#Loop with true condition
-while True:
-    calculator()
-    #Ask the user if they want to try again
-    try_again = str(input("\033[95m" + "Do you want to try again? (yes/no): " + "\033[0m"))
-
-    #If yes, rerun the program
-    if try_again == "yes":
-        continue
-    #If no, Display "Thank you!" and exit the program
-    elif try_again == "no":
-        gratitude = "\033[102;1m" + "Thank you!" + "\033[0m"
-        print("\n" + ":" * 50)
-        print(gratitude.center(60))
-        print(":" * 50)
-        break
-    while try_again != "yes" and try_again != "no":
-        print("\033[100m" + "Invalid input: Please enter only 'yes or no'." + "\033[0m")
-        #Ask the user if they want to try again
-        try_again = str(input("\033[95m" + "Do you want to try again? (yes/no): " + "\033[0m"))
-        
-        #If no, Display "Thank you!" and exit the program        
-        if try_again == "no":
-            gratitude = "\033[102;1m" + "Thank you!" + "\033[0m"
-            print("\n" + ":" * 50)
-            print(gratitude.center(60))
-            print(":" * 50)
-            exit()
