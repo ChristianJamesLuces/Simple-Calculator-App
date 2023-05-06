@@ -1,4 +1,4 @@
-#Luces, Christian James M. | BSCpE 1-5 | Assignment #5 | Simple Calculator
+#Luces, Christian James M. | BSCpE 1-5 | Assignment #5 | Simple App Calculator
 
 #Pseudocode
 #Import the necessary modules
