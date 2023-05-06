@@ -11,11 +11,14 @@ time.sleep(5)
 #Create a loop with True condition
 while True:
     #Ask the user to choose one operation
-    operation = str(input("Choose one of the four math operatoins (Addition, Subtraction, Multiplication, and Division)"))
+    operation = str(input("Choose one of the four math operatoins (Addition, Subtraction, Multiplication, and Division: )"))
     
     #Ask the user for two numbers
     first_number = float(input("Input your first number: "))
     second_number = float(input("Input your second number: "))
+
+    print("Calculating.....")
+    time.sleep(5)
 
     #Perform the operation base from the user's choiced
     if operation == "Addition":
@@ -28,6 +31,8 @@ while True:
         result = first_number / second_number
     else:
         print("Invalid input: It's not an operation")
-#Display the result
+    #Display the result
+    print("Result: ", result)
+    print("-Operation executed-")
 #Ask the user if they want to try again
 #Display "Thank you!" before it exits
