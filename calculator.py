@@ -12,10 +12,22 @@ time.sleep(5)
 while True:
     #Ask the user to choose one operation
     operation = str(input("Choose one of the four math operatoins (Addition, Subtraction, Multiplication, and Division)"))
+    
+    #Ask the user for two numbers
     first_number = float(input("Input your first number: "))
     second_number = float(input("Input your second number: "))
-#Ask the user for two numbers
-#Perform the operation base from the user's choiced
+
+    #Perform the operation base from the user's choiced
+    if operation == "Addition":
+        result = first_number + second_number
+    elif operation == "Subtraction":
+        result = first_number - second_number
+    elif operation == "Multiplication":
+        result = first_number * second_number
+    elif operation == "Division":
+        result = first_number / second_number
+    else:
+        print("Invalid input: It's not an operation")
 #Display the result
 #Ask the user if they want to try again
 #Display "Thank you!" before it exits
