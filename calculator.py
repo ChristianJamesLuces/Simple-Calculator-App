@@ -13,6 +13,7 @@ while True:
     #Ask the user to choose one operation
     operation = str(input("Choose one of the four math operatoins (Addition, Subtraction, Multiplication, and Division)"))
     first_number = float(input("Input your first number: "))
+    second_number = float(input("Input your second number: "))
 #Ask the user for two numbers
 #Perform the operation base from the user's choiced
 #Display the result
