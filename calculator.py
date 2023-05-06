@@ -52,6 +52,8 @@ def calculator():
     finally:
         print("\033[1m" + "...Simple App Calculator Program...".center(50) + "\033[0m")
         print("=" * 50 + "\n")
+
+#Loop with true condition
 while True:
     calculator()
     #Ask the user if they want to try again
@@ -69,8 +71,10 @@ while True:
         break
     while try_again != "yes" and try_again != "no":
         print("\033[100m" + "Invalid input: Please enter only 'yes or no'." + "\033[0m")
+        #Ask the user if they want to try again
         try_again = str(input("\033[95m" + "Do you want to try again? (yes/no): " + "\033[0m"))
-                
+        
+        #If no, Display "Thank you!" and exit the program        
         if try_again == "no":
             gratitude = "\033[102;1m" + "Thank you!" + "\033[0m"
             print("\n" + ":" * 50)
