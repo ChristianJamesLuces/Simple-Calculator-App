@@ -64,12 +64,12 @@ while True:
                 try_again = str(input("\033[95m" + "Do you want to try again? (yes/no): " + "\033[0m"))
 
         except ValueError: 
-            print("Invalid input: Please enter only 'yes or no'.")
+            print( "\033[9m" + "Invalid input: Please enter only 'yes or no'." + "\033[0m" )
     
     except ZeroDivisionError:
-        print("Invalid Input: Cannot be devide by zero.")
+        print("\033[9m" + "Invalid Input: Cannot be devide by zero." + "\033[0m" )
     except ValueError:
-        print("Invalid Input: Please enter a number")
+        print("\033[9m" + "Invalid Input: Please enter a number" + "\033[0m" )
     finally: 
         print("\033[36m" + "...Simple App Calculator Program...".center(50) + "\033[0m")
         print("=" * 50 + "\n")
