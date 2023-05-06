@@ -16,7 +16,7 @@ while True:
     #Exception handling
     try:
         #Ask the user to choose one operation
-        operation = str(input("Choose one of the four math operatoins (Addition, Subtraction, Multiplication, and Division: )"))
+        operation = str(input("Choose one of the four math operatoins (Addition, Subtraction, Multiplication, and Division: "))
         
         #Ask the user for two numbers
         first_number = float(input("Input your first number: "))
@@ -34,7 +34,7 @@ while True:
         elif operation == "Division":
             result = first_number / second_number
         else:
-            print("Invalid input: It's not an operation")
+            raise ValueError("Invalid input: It's not an operation.")
 
         #Display the result
         print("Result: ", result)
@@ -43,14 +43,20 @@ while True:
         #Ask the user if they want to try again
         try_again = str(input("Do you want to try again? (yes/no): "))
 
+        #If yes, rerun the program
+        if try_again == "yes":
+            continue
+
         #If no, Display "Thank you!" and exit the program
-        if try_again == "no":
+        elif try_again == "no":
             print("Thank you!")
             break
+        else:
+            raise ValueError("Invalid input: Please enter only 'yes or no'.")
     
     except ZeroDivisionError:
         print("Invalid Input: Cannot be devide by zero.")
     except ValueError:
         print("Invalid Input: Please enter a number.")
     finally: 
-        print("Closing the Simple App Calculator program.")
+        print("...Closing the Simple App Calculator program...")
