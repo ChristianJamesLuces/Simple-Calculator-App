@@ -11,6 +11,7 @@ This program provides the following features:
 - Performs the selected math operation
 - Displays the result
 - Asks the user if they want to try again
+- Displays the captured errors
 - Handles invalid input for trying again
 
 ## Installation
@@ -29,7 +30,8 @@ pip3 install pyfiglet
 6. The program will display the result of the math operation.
 7. If you want to perform another operation, enter 'yes' when asked.
 8. If you don't want to perform another operation, enter 'no' when asked.
-9. The program will display a "Thank you!" message and exit.
+9. If there is an error in your inputs it will show the captured error by the use of exception handling.
+10. The program will display a "Thank you!" message and exit.
 
 
 ## Contributing 
